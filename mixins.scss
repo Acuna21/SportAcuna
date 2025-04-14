@@ -1,0 +1,42 @@
+
+
+// botones
+@mixin button-style($bg-color, $text-color, $border-color, $border-radius) {
+    background-color: $bg-color;
+    color: $text-color;
+    border: 1px solid $border-color;
+    font-weight: bold;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    line-height: 1.4;
+
+    &:hover {
+        background-color: darken($bg-color, 10%);
+        border-color: darken($border-color, 10%);
+    }
+}
+
+@mixin button-size($padding, $font-size) {
+    padding: $padding;
+    font-size: $font-size;
+}
+
+// Botón principal (Morado)
+.btn-primary {
+    @include button-style($primary-color, white, $primary-color, 5px);
+}
+
+// Botón secundario (Blanco con borde morado)
+.btn-secondary {
+    @include button-style(white, $primary-color, $primary-color, 5px);
+}
+
+.btn-circle{
+    @include button-style($primary-color, white, $primary-color, 30px);
+}
+
+// Tamaños
+.s { @include button-size(8px 10px, 16px); }
+.m { @include button-size(12px 15px, 18px); }
+.l { @include button-size(12px 20px, 18px); }
