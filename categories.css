@@ -67,6 +67,7 @@ li {
   cursor: pointer;
   transition: all 0.3s ease;
   line-height: 1.4;
+  text-align: center;
 }
 .btn-primary:hover {
   background-color: #4d097e;
@@ -82,6 +83,7 @@ li {
   cursor: pointer;
   transition: all 0.3s ease;
   line-height: 1.4;
+  text-align: center;
 }
 .btn-secondary:hover {
   background-color: #e6e6e6;
@@ -97,6 +99,7 @@ li {
   cursor: pointer;
   transition: all 0.3s ease;
   line-height: 1.4;
+  text-align: center;
 }
 .btn-circle:hover {
   background-color: #4d097e;
@@ -118,21 +121,21 @@ li {
   font-size: 18px;
 }
 
-.categorias-section {
+.categories-section {
   margin: 2rem 1rem;
 }
-.categorias-section h2 {
+.categories-section h2 {
   color: #6A0DAD;
   margin-bottom: 1.5rem;
 }
-.categorias-section .categorias-container {
+.categories-section .categories-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 1.5rem;
   padding: 0;
   place-items: center;
 }
-.categorias-section .categorias-container li {
+.categories-section .categories-container .category {
   background-color: white;
   border-radius: 6px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -144,42 +147,43 @@ li {
   gap: 20px;
   width: 100%;
   max-width: 100%;
+  min-height: 180px;
 }
-.categorias-section .categorias-container li:hover {
+.categories-section .categories-container .category:hover {
   transform: scale(1.05);
   background: #D8BFD8;
   border: 1px solid #f5dff5;
 }
-.categorias-section .categorias-container li .img-cate {
+.categories-section .categories-container .category .img-category {
   width: 120px;
   border-radius: 6px;
   -o-object-fit: cover;
      object-fit: cover;
   transition: transform 0.3s ease-in-out;
 }
-.categorias-section .categorias-container li .info {
+.categories-section .categories-container .category .info {
   text-align: left;
 }
-.categorias-section .categorias-container li .info p {
+.categories-section .categories-container .category .info p {
   margin-top: 0.5rem;
   font-size: 1.5rem;
   font-weight: 400;
   color: #2C2C2C;
 }
-.categorias-section .categorias-container li .info span {
+.categories-section .categories-container .category .info span {
   color: #2C2C2C;
   text-align: justify;
   font-size: 14px;
 }
 
 @media (max-width: 900px) {
-  .categorias-section .categorias-container {
+  .categories-section .categories-container {
     grid-template-columns: 1fr;
   }
-  .categorias-section .info {
+  .categories-section .info {
     text-align: center;
   }
-  .categorias-section .info span {
+  .categories-section .info span {
     font-size: 15px;
   }
 }/*# sourceMappingURL=categories.css.map */

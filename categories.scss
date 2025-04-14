@@ -2,9 +2,7 @@
 @import "./colors.scss";
 @import "./mixins.scss";
 
-.categorias-section {
-    // text-align: center;
-    // padding: 2rem 4rem;
+.categories-section {
     margin: 2rem 1rem;
 
     h2 {
@@ -12,15 +10,14 @@
         margin-bottom: 1.5rem;
     }
 
-    .categorias-container {
+    .categories-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
         gap: 1.5rem;
         padding: 0;
         place-items: center;
-        // justify-items: center;
-    
-        li {
+
+        .category {
             background-color: white;
             border-radius: 6px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -33,56 +30,53 @@
             gap: 20px;
             width: 100%;
             max-width: 100%;
-    
+            min-height: 180px;
+
             &:hover {
                 transform: scale(1.05);
                 background: $light-purple;
                 border: 1px solid #f5dff5;
             }
-    
-            .img-cate {
+
+            .img-category {
                 width: 120px;
-                // height: 120px;
                 border-radius: 6px;
                 object-fit: cover;
                 transition: transform 0.3s ease-in-out;
             }
 
-            .info{
+            .info {
                 text-align: left;
+
                 p {
                     margin-top: 0.5rem;
                     font-size: 1.5rem;
                     font-weight: 400;
                     color: $dark-gray;
                 }
-    
-                span{
+
+                span {
                     color: $dark-gray;
                     text-align: justify;
                     font-size: 14px;
                 }
             }
-    
         }
     }
 }
 
 @media (max-width: 900px) {
-    .categorias-section {
-        .categorias-container {
+    .categories-section {
+        .categories-container {
             grid-template-columns: 1fr;
         }
 
         .info {
             text-align: center;
 
-            span{
-                font-size: 15px
+            span {
+                font-size: 15px;
             }
         }
     }
 }
-
-
-
