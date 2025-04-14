@@ -2,46 +2,47 @@
 @import "./colors.scss";
 @import "./mixins.scss";
 
-.top-bar{
-    background: $light-purple; 
+// Top bar - Responsiva
+.top-bar {
+    background: $light-purple;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-
-    .contact-info{
+    
+    .contact-info {
         display: flex;
         gap: 20px;
-        
-        span{
-            color:$black;
-            font-size: 14px;
-            
-            &:hover{
-                color:$primary-color;
-                font-weight: 600;
-                transform: scale(1.1); 
 
-                a{
-                    color:$primary-color; 
+        span {
+            color: $black;
+            font-size: 14px;
+
+            &:hover {
+                color: $primary-color;
+                font-weight: 600;
+                transform: scale(1.1);
+
+                a {
+                    color: $primary-color;
                 }
             }
         }
-
     }
 
-    .slogan{
+    .slogan {
         color: $black;
     }
 
-    .icon-group{
+    .icon-group {
         display: flex;
         gap: 20px;
     }
 }
 
-.header{
+// Header - Responsivo
+.header {
     background: white;
     display: flex;
     justify-content: space-between;
@@ -49,8 +50,8 @@
     padding: 15px 4rem;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 
-    .info-nav{
-        display: flex; 
+    .info-nav {
+        display: flex;
         align-items: center;
         gap: 40px;
 
@@ -60,43 +61,54 @@
             cursor: pointer;
 
             img {
-                height: 80px; 
+                height: 80px;
             }
         }
 
-        .nav{
+        .nav {
             gap: 20px;
             display: flex;
-            
-            a{
+
+            a {
                 font-weight: 600;
-                color:$primary-color;
-                font-size: 20px;  
-                position: relative;  
+                color: $primary-color;
+                font-size: 20px;
+                position: relative;
 
                 &::after {
-                    content: ""; 
+                    content: "";
                     position: absolute;
                     left: 0;
-                    bottom: -3px; 
-                    width: 0%; 
-                    height: 2px; 
+                    bottom: -3px;
+                    width: 0%;
+                    height: 2px;
                     background-color: $secondary-color;
-                    transition: width 0.3s ease-in-out; 
+                    transition: width 0.3s ease-in-out;
                 }
 
-                &:hover{
-                    color:$secondary-color;
+                &:hover {
+                    color: $secondary-color;
 
                     &::after {
-                        width: 100%; 
+                        width: 100%;
                     }
                 }
             }
         }
+
+        // Menu hamburguesa 
+        #hamburger-menu {
+            display: none;
+            font-size: 25px;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top: 20%;
+            transform: translateY(-50%);
+        }
     }
 
-    .btn-option{
+    .btn-option {
         display: flex;
         align-items: center;
         gap: 20px;
@@ -115,10 +127,98 @@
             gap: 20px;
             display: flex;
 
-            i{
+            i {
                 cursor: pointer;
             }
         }
     }
 }
 
+// Estilos Responsivos para pantallas pequeñas
+@media (max-width: 990px) {
+    .top-bar {
+        flex-direction: column;
+        padding: 10px;
+        
+        .contact-info {
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+        }
+
+        .icon-group {
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+    }
+
+    .header {
+        padding: 10px 2rem;
+        flex-direction: column;
+        align-items: center;
+
+        .info-nav {
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+
+            .logo{
+                img{
+                    height: 120px;
+                }
+            }
+
+            .nav {
+                gap: 30px;
+                align-items: center;
+                width: 100%;
+                justify-content: space-between;
+    
+                a {
+                    font-size: 20px;
+                }
+            }
+    
+            #hamburger-menu {
+                display: block; 
+            }
+        }
+
+
+        .btn-option {
+            display: none;
+        }
+    }
+}
+
+// Estilos para pantallas muy pequeñas (móviles)
+@media (max-width: 600px) {
+    .top-bar {
+        .contact-info {
+            font-size: 12px;
+        }
+
+        .slogan {
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+}
+
+// Estilo para el menú desplegado
+.nav.active {
+    display: flex !important;
+    animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

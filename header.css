@@ -200,6 +200,15 @@ li {
 .header .info-nav .nav a:hover::after {
   width: 100%;
 }
+.header .info-nav #hamburger-menu {
+  display: none;
+  font-size: 25px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20%;
+  transform: translateY(-50%);
+}
 .header .btn-option {
   display: flex;
   align-items: center;
@@ -220,4 +229,73 @@ li {
 }
 .header .btn-option .icons i {
   cursor: pointer;
+}
+
+@media (max-width: 990px) {
+  .top-bar {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .top-bar .contact-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .top-bar .icon-group {
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .header {
+    padding: 10px 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header .info-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .header .info-nav .logo img {
+    height: 120px;
+  }
+  .header .info-nav .nav {
+    gap: 30px;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .header .info-nav .nav a {
+    font-size: 20px;
+  }
+  .header .info-nav #hamburger-menu {
+    display: block;
+  }
+  .header .btn-option {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .top-bar .contact-info {
+    font-size: 12px;
+  }
+  .top-bar .slogan {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+.nav.active {
+  display: flex !important;
+  animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }/*# sourceMappingURL=header.css.map */
