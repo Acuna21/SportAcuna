@@ -56,4 +56,13 @@ ul {
 
 li {
   list-style: none;
+}
+
+input {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #D3D3D3;
+}
+input:focus {
+  outline: none;
 }/*# sourceMappingURL=style.css.map */
