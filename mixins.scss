@@ -38,6 +38,7 @@
 }
 
 // Tamaños
+.xs { @include button-size(4px 8px, 16px); }
 .s { @include button-size(8px 10px, 16px); }
 .m { @include button-size(12px 15px, 18px); }
 .l { @include button-size(12px 20px, 18px); }

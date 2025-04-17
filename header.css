@@ -115,6 +115,11 @@ input:focus {
   border-color: #4d097e;
 }
 
+.xs {
+  padding: 4px 8px;
+  font-size: 16px;
+}
+
 .s {
   padding: 8px 10px;
   font-size: 16px;
@@ -251,11 +256,88 @@ input:focus {
   align-items: center;
   gap: 20px;
 }
-.header .btn-option a {
-  text-decoration: none;
-  font-weight: 600;
-  margin-right: 15px;
-  font-size: 20px;
+.header .btn-option .shopping-icon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.header .btn-option .shopping-icon-wrapper .mini-cart {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background: white;
+  border: 1px solid #D3D3D3;
+  border-radius: 6px;
+  width: 500px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px 15px;
+  z-index: 100;
+  display: none;
+}
+.header .btn-option .shopping-icon-wrapper .mini-cart h4 {
+  color: #6A0DAD;
+}
+.header .btn-option .shopping-icon-wrapper .mini-cart ul {
+  padding: 0;
+  margin: 10px 0;
+}
+.header .btn-option .shopping-icon-wrapper .mini-cart ul li {
+  font-size: 14px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+.header .btn-option .shopping-icon-wrapper .mini-cart ul li .info-cart {
+  display: flex;
+  gap: 20px;
+}
+.header .btn-option .shopping-icon-wrapper .mini-cart ul li .info-cart img {
+  width: 80px;
+  height: 80px;
+  border-radius: 4px;
+}
+.header .btn-option .shopping-icon-wrapper .mini-cart ul li .info-cart p {
+  margin: 0;
+}
+.header .btn-option .shopping-icon-wrapper .mini-cart ul li .info-cart p.title {
+  font-size: 16px;
+  color: #6A0DAD;
+}
+.header .btn-option .shopping-icon-wrapper .mini-cart ul li .info-cart p.price {
+  font-size: 13px;
+  color: #2C2C2C;
+}
+.header .btn-option .shopping-icon-wrapper .mini-cart ul li .delete-container i {
+  font-size: 16px;
+  color: #2C2C2C;
+}
+.header .btn-option .shopping-icon-wrapper .mini-cart .mini-cart-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header .btn-option .shopping-icon-wrapper .mini-cart.active {
+  display: block;
+}
+.header .btn-option .cart-count {
+  position: absolute;
+  top: -22px;
+  right: 38px;
+  background: #D8BFD8;
+  color: #6A0DAD;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 0 10px;
+}
+.header .btn-option i {
+  cursor: pointer;
+}
+.header .btn-option .shopping {
+  margin-right: 3rem;
+  margin-left: 20px;
 }
 .header .btn-option .icons {
   font-size: 20px;
